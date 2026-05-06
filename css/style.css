@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&family=Work+Sans&display=swap');
+
+:root {
+  --bg-color: #FFFCE1;
+  --text-color: #000000;
+  --accent-color: #4361EE;
+  --border-thickness: 4px;
+  --shadow-offset: 4px;
+  --font-heading: 'Space Mono', monospace;
+  --font-body: 'Work Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-body);
+  line-height: 1.5;
+  font-size: 18px;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 24px 64px 24px;
+  border: var(--border-thickness) solid var(--text-color);
+  box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--text-color);
+  background-color: white;
+}
+
+h1, h2 {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  border-bottom: var(--border-thickness) solid var(--text-color);
+  padding-bottom: 8px;
+}
+
+h1 {
+  font-size: 3rem;
+  letter-spacing: -0.05em;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: 48px;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.accent {
+  color: var(--accent-color);
+  font-weight: 700;
+}
+
+form {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+label {
+  font-weight: 700;
+  display: block;
+  margin-bottom: 6px;
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+}
+
+input, select {
+  padding: 12px;
+  border: var(--border-thickness) solid var(--text-color);
+  box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--text-color);
+  font-size: 1rem;
+  font-family: var(--font-body);
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--accent-color);
+}
+
+button {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 14px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--text-color);
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #334dd1;
+}
+
+footer {
+  margin-top: 64px;
+  font-size: 0.875rem;
+  color: var(--text-color);
+  font-family: var(--font-body);
+  text-align: center;
+  border-top: var(--border-thickness) solid var(--text-color);
+  padding-top: 24px;
+}
+
+@media (max-width: 500px) {
+  body {
+    font-size: 16px;
+  }
+  .container {
+    padding: 24px 16px 48px 16px;
+  }
+  h1 {
+    font-size: 2.25rem;
+  }
+  h2 {
+    font-size: 1.25rem;
+  }
+}
